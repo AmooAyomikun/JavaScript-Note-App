@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <h2 class="logo">MyNotes</h2>
+        <button class="addnote-btn" id="addnote-btn">+ Add New Note</button>
+        <div class="menu">
+            <a href="#" class="active" id="all-notes">All Notes</a>
+            <a href="#" id="favorites">Favorites</a>
+        </div>
+    </div>
+
+    <div class="main" id="main">
+        <header class="header">
+            <input type="text" placeholder="Search notes..." class="search-input" id="search-input">
+        </header>
+
+        <div class="notes-container" id="notes-container">
+            <div class="note-card">
+                <h3>Meeting Notes</h3>
+                <p>Discuss project timeline and deliverables for next sprint.</p>
+
+                <div class="notebtn">
+                    <span class="date">Mar 12</span>
+                    <div class="actions">
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note-card">
+                <h3>Ideas</h3>
+                <p>Build a JavaScript portfolio with real world apps.</p>
+
+                <div class="notebtn">
+                    <span class="date">Mar 11</span>
+                    <div class="actions">
+                        <button class="edit-btn">Edit</button>
+                        <button class="favorite-btn"><i class="fas fa-heart"></i></button>
+                        <button class="delete-btn">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<!-- Note Modal -->
+<div class="modal hidden" id="note-modal">
+    <div class="modal-content">
+        <h2>Create Note</h2>
+        <input type="text" placeholder="Note title" class="note-title-input" id="note-title">
+        <!-- <small class="error-msg">Enter your note title</small> -->
+        <textarea placeholder="Write your note..." class="note-textarea" id="note-content"></textarea>
+        <small class="error-msg">You must fill the two input to Create a note</small>
+        
+        <div class="modalbtn">
+            <button class="save-btn" id="save-note-btn">Save Note</button>
+            <button class="done-editting-btn" id="edit-btn">Done Editing</button>
+            <button class="cancel-btn" id="cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
